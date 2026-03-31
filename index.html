@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOKILA Printers | Premium Printing & Insurance</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-home">
+
+  <!-- Loading Screen -->
+<div id="pageLoader" style="position:fixed;top:0;left:0;
+width:100%;height:100%;background:#050714;z-index:99999;
+display:flex;flex-direction:column;align-items:center;
+justify-content:center;gap:28px;transition:opacity 0.6s ease,
+visibility 0.6s ease;">
+
+<div style="position:relative;width:160px;height:160px;">
+<div style="position:absolute;inset:0;border-radius:50%;border:2px solid rgba(124,58,237,0.6);animation:ripple 2s ease-out infinite 0s;"></div>
+<div style="position:absolute;inset:0;border-radius:50%;border:2px solid rgba(6,182,212,0.5);animation:ripple 2s ease-out infinite 0.5s;"></div>
+<div style="position:absolute;inset:0;border-radius:50%;border:2px solid rgba(167,139,250,0.4);animation:ripple 2s ease-out infinite 1s;"></div>
+<div style="position:absolute;inset:0;border-radius:50%;border:2px solid rgba(6,182,212,0.3);animation:ripple 2s ease-out infinite 1.5s;"></div>
+<div style="position:absolute;top:50%;left:50%;width:10px;height:10px;margin:-5px;border-radius:50%;background:#7c3aed;animation:orbit1 1.8s linear infinite;box-shadow:0 0 10px #7c3aed;"></div>
+<div style="position:absolute;top:50%;left:50%;width:8px;height:8px;margin:-4px;border-radius:50%;background:#06b6d4;animation:orbit2 1.8s linear infinite 0.6s;box-shadow:0 0 10px #06b6d4;"></div>
+<div style="position:absolute;top:50%;left:50%;width:6px;height:6px;margin:-3px;border-radius:50%;background:#a78bfa;animation:orbit3 1.8s linear infinite 1.2s;box-shadow:0 0 8px #a78bfa;"></div>
+<div style="position:absolute;inset:20px;border-radius:50%;border:3px solid transparent;border-top:3px solid #7c3aed;border-right:3px solid #06b6d4;animation:spin 1s linear infinite;"></div>
+<div style="position:absolute;inset:30px;border-radius:50%;border:2px solid transparent;border-bottom:2px solid #a78bfa;border-left:2px solid #06b6d4;animation:spinR 1.5s linear infinite;"></div>
+<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+<div style="width:64px;height:64px;background:linear-gradient(135deg,#7c3aed,#06b6d4);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:900;font-size:30px;color:white;animation:pulse 1.5s ease-in-out infinite alternate;box-shadow:0 0 20px rgba(124,58,237,0.5);">K</div>
+</div>
+</div>
+
+<div style="display:flex;gap:10px;align-items:center;">
+<div style="width:10px;height:10px;border-radius:50%;background:#7c3aed;animation:inkDrop 1.2s ease-in-out infinite 0s;"></div>
+<div style="width:10px;height:10px;border-radius:50%;background:#9333ea;animation:inkDrop 1.2s ease-in-out infinite 0.15s;"></div>
+<div style="width:10px;height:10px;border-radius:50%;background:#a855f7;animation:inkDrop 1.2s ease-in-out infinite 0.3s;"></div>
+<div style="width:10px;height:10px;border-radius:50%;background:#06b6d4;animation:inkDrop 1.2s ease-in-out infinite 0.45s;"></div>
+<div style="width:10px;height:10px;border-radius:50%;background:#0ea5e9;animation:inkDrop 1.2s ease-in-out infinite 0.6s;"></div>
+</div>
+
+<div style="text-align:center;">
+<div style="font-family:Georgia,serif;font-weight:800;
+font-size:22px;letter-spacing:6px;color:white;
+animation:fadeText 2s ease-in-out infinite alternate;">KOKILA</div>
+<div style="font-family:monospace;font-size:10px;
+letter-spacing:6px;color:#06b6d4;margin-top:4px;">PRINTERS</div>
+</div>
+
+<div style="width:180px;height:3px;background:rgba(255,255,255,0.07);border-radius:2px;overflow:hidden;">
+<div style="height:100%;width:40%;background:linear-gradient(90deg,transparent,#7c3aed,#06b6d4,transparent);animation:slide 1.5s ease-in-out infinite;"></div>
+</div>
+
+<style>
+@keyframes ripple{0%{transform:scale(0.3);opacity:1;}100%{transform:scale(2.2);opacity:0;}}
+@keyframes orbit1{0%{transform:rotate(0deg) translateX(60px) rotate(0deg);}100%{transform:rotate(360deg) translateX(60px) rotate(-360deg);}}
+@keyframes orbit2{0%{transform:rotate(0deg) translateX(50px) rotate(0deg);}100%{transform:rotate(360deg) translateX(50px) rotate(-360deg);}}
+@keyframes orbit3{0%{transform:rotate(0deg) translateX(65px) rotate(0deg);}100%{transform:rotate(360deg) translateX(65px) rotate(-360deg);}}
+@keyframes spin{to{transform:rotate(360deg);}}
+@keyframes spinR{to{transform:rotate(-360deg);}}
+@keyframes pulse{0%{transform:scale(1);box-shadow:0 0 20px rgba(124,58,237,0.5);}100%{transform:scale(1.08);box-shadow:0 0 35px rgba(6,182,212,0.7);}}
+@keyframes inkDrop{0%,100%{transform:translateY(0);opacity:0.4;}50%{transform:translateY(-14px);opacity:1;}}
+@keyframes fadeText{0%{opacity:0.5;letter-spacing:6px;}100%{opacity:1;letter-spacing:8px;}}
+@keyframes slide{0%{transform:translateX(-200%);}100%{transform:translateX(500%);}}
+</style>
+</div>
+
+<div class="bg-animation" id="bgAnim"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+  <div class="logo-icon">
+    <svg width="42" height="42" viewBox="0 0 42 42" 
+         xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="logoGrad" x1="0%" y1="0%" 
+                        x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#7c3aed"/>
+          <stop offset="100%" style="stop-color:#06b6d4"/>
+        </linearGradient>
+      </defs>
+      <!-- Rounded background -->
+      <rect width="42" height="42" rx="10" 
+            fill="url(#logoGrad)"/>
+      <!-- Letter K shape -->
+      <text x="8" y="30" 
+            font-family="Syne, Arial, sans-serif" 
+            font-weight="900" 
+            font-size="26" 
+            fill="white">K</text>
+      <!-- Small printer dot accent -->
+      <circle cx="34" cy="10" r="4" 
+              fill="white" opacity="0.6"/>
+      <circle cx="34" cy="10" r="2" 
+              fill="white"/>
+    </svg>
+  </div>
+  <div class="logo-text">
+    <span class="logo-name">KOKILA</span>
+    <span class="logo-sub">PRINTERS</span>
+  </div>
+      </a>
+      <button class="hamburger">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="printing.html">Printing</a>
+        <a href="insurance.html">Insurance</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary btn-magnetic" style="margin-left: 1rem;">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="container relative z-10">
+      <h1 style="min-height: 200px; display: flex; align-items: center; justify-content: center;">
+        <span id="heroTypewriter"></span><span class="cursor">|</span>
+      </h1>
+      <p class="mx-auto animate-slide-right" style="transition-delay: 200ms; max-width: 600px;">Premium printing
+        services & insurance solutions in Kottaipattinam</p>
+      <div class="hero-buttons animate-on-scroll" style="transition-delay: 400ms;">
+        <a href="printing.html" class="btn btn-primary btn-magnetic">Explore Printing</a>
+        <a href="insurance.html" class="btn btn-outline btn-magnetic">Get Insurance</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats -->
+  <section class="stats animate-on-scroll">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item animate-on-scroll">
+          <h3><span class="stat-number" data-value="25000" data-suffix="+">0</span></h3>
+          <p>Happy Customers</p>
+        </div>
+        <div class="stat-item animate-on-scroll" style="transition-delay: 100ms">
+          <h3><span class="stat-number" data-value="25" data-suffix="+">0</span></h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-item animate-on-scroll" style="transition-delay: 200ms">
+          <h3><span class="stat-number" data-value="1000" data-suffix="+">0</span></h3>
+          <p>Insurance Policies</p>
+        </div>
+        <div class="stat-item animate-on-scroll" style="transition-delay: 300ms">
+          <h3><span class="stat-number" data-value="100" data-suffix="%">0</span></h3>
+          <p>Trusted Service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="animate-on-scroll">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="animate-slide-left">What We Do Best</h2>
+        <p class="title-subheading mt-2 animate-slide-right">Two powerful services. One trusted name.</p>
+      </div>
+
+      <div class="card-grid pt-4">
+
+        <!-- Printing Preview -->
+        <div class="service-card tilt-card animate-on-scroll">
+          <div class="card-image">
+            <img src="images/printing-hero.jpg" alt="Printing Services" loading="lazy">
+            <div class="card-image-overlay" style="background: linear-gradient(135deg, rgba(124,58,237,0.6), rgba(236,72,153,0.3))"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-icon" style="color: var(--violet); border-color: var(--violet)">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 18v4h12v-4M6 18h12">
+                </path>
+              </svg>
+            </div>
+            <span class="card-tag" style="color: var(--violet)">ALL-IN-ONE PRINTING</span>
+            <h3 class="card-title">Printing Services</h3>
+            <p class="card-desc">Premium quality prints for every occasion. From traditional Pathirikai to modern glossy
+              visiting cards, we ensure precision and perfection.</p>
+            <a href="printing.html" class="card-cta btn-magnetic" style="color: var(--violet)">
+              <span>View Services &rarr;</span>
+            </a>
+          </div>
+          <div class="card-glow-follow"></div>
+        </div>
+
+        <!-- Insurance Preview -->
+        <div class="service-card tilt-card animate-on-scroll" style="transition-delay: 200ms">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Insurance Services" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&q=80'">
+            <div class="card-image-overlay" style="background: linear-gradient(135deg, rgba(6,182,212,0.6), rgba(59,130,246,0.3))"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-icon" style="color: var(--cyan); border-color: var(--cyan)">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                </path>
+              </svg>
+            </div>
+            <span class="card-tag" style="color: var(--cyan)">UNITED INDIA AGENT</span>
+            <h3 class="card-title">United India Insurance</h3>
+            <p class="card-desc">Authorized partner providing genuine coverage. Protect your vehicles, health, and
+              family with tailored insurance plans.</p>
+            <a href="insurance.html" class="card-cta btn-magnetic" style="color: var(--cyan)">
+              <span>Explore Coverage &rarr;</span>
+            </a>
+          </div>
+          <div class="card-glow-follow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding-bottom: 6rem;">
+    <div class="container text-center">
+      <div class="animate-on-scroll glass-panel" style="padding: 5rem 2rem; border-color: rgba(124,58,237,0.3)">
+        <h2 class="animate-slide-left" style="font-size: 3rem; margin-bottom: 1rem;">Ready to get started?</h2>
+        <p class="animate-slide-right" style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2.5rem;">
+          Visit our shop or reach out online for inquiries and quotations.</p>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-primary btn-magnetic"
+             style="background: white; color: var(--bg-dark);">Contact Us</a>
+          <a href="https://wa.me/919976158371" target="_blank" class="btn btn-outline btn-magnetic"
+             style="border-color: rgba(255,255,255,0.2); color: white;">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="animate-on-scroll">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo mb-4">
+  <div class="logo-icon">
+    <svg width="42" height="42" viewBox="0 0 42 42" 
+         xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="logoGrad" x1="0%" y1="0%" 
+                        x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#7c3aed"/>
+          <stop offset="100%" style="stop-color:#06b6d4"/>
+        </linearGradient>
+      </defs>
+      <!-- Rounded background -->
+      <rect width="42" height="42" rx="10" 
+            fill="url(#logoGrad)"/>
+      <!-- Letter K shape -->
+      <text x="8" y="30" 
+            font-family="Syne, Arial, sans-serif" 
+            font-weight="900" 
+            font-size="26" 
+            fill="white">K</text>
+      <!-- Small printer dot accent -->
+      <circle cx="34" cy="10" r="4" 
+              fill="white" opacity="0.6"/>
+      <circle cx="34" cy="10" r="2" 
+              fill="white"/>
+    </svg>
+  </div>
+  <div class="logo-text">
+    <span class="logo-name">KOKILA</span>
+    <span class="logo-sub">PRINTERS</span>
+  </div>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Premium custom printing services and authorized United
+            India Insurance agents serving Kottaipattinam with excellence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="printing.html">Printing Services</a></li>
+            <li><a href="insurance.html">Insurance Plans</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul style="color: var(--text-muted); font-size: 0.9rem;">
+            <li>Avudaiyar Kovil Road, Near ICICI Bank,<br>Kottaipattinam, Tamil Nadu 614619</li>
+            <li>+91 99761 58371</li>
+            <li>kokilaprinterskpm@gmail.com</li>
+            <li style="color: var(--cyan); font-family: monospace; margin-top: 1rem;">MON - SAT : 9:00 AM - 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom flex justify-between">
+        <p>&copy; 2026 Kokila Printers. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919976158371" class="whatsapp-float btn-magnetic" target="_blank">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.618-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z" />
+    </svg>
+  </a>
+
+  <script src="main.js" defer></script>
+</body>
+
+</html>
